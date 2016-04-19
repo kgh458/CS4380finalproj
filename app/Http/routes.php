@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//routes that will all go to the home page, this page
+//should have correct middleware to route the user to 
+//the application should they already be logged in, and
+//to the login page if they are not
+Route::get( '/', 'PagesController@index' );
+Route::get( 'index', 'PagesController@index' );
+Route::get( 'home', 'PagesController@index' );

@@ -2,7 +2,7 @@
 
 @yields( 'content' );
     <div class="container">
-        <div class="content">
+        <div class="content" style="color: white">
             <div class="title">So heres the plan:</div>
             <h2>-Kara and Will need to connect her bootstrap to this app</h2>
             <h2>-Will then need to route and link everything correctly page to page (only get requests this far)</h2>

@@ -189,9 +189,10 @@
 </body>
     
   <body>
+       <div class="container">
 
    @section( 'content' );
-    
+      </div>
   </body>
 
 </html>

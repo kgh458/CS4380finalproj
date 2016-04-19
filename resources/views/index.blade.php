@@ -1,6 +1,6 @@
-@extends( 'template' );
+@extends( 'template' )
 
-@yields( 'content' );
+@section( 'content' )
     <div class="container">
         <div class="content" style="color: white">
             <div class="title">So heres the plan:</div>
@@ -13,4 +13,5 @@
             <h2>-Alright, break!</h2>
             <div class="title">Laravel 5</div>
         </div>
-</div>
+    </div>
+@end

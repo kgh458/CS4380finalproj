@@ -47,7 +47,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">CAFNR Educational Technologies</a>
+                <a class="navbar-brand" href="{{ action('PagesController@index') }}">CAFNR Educational Technologies</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -156,26 +156,28 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li>
-                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="requests.html"><i class="fa fa-fw fa-bar-chart-o"></i> Requests</a>
-                    </li>
-                    <li>
-                        <a href="inventory.html"><i class="fa fa-fw fa-table"></i> Inventory</a>
-                    </li>
-                    <li>
-                        <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Request Forms</a>
-                    </li>
                     <li class="active">
-                        <a href="login-page.html"><i class="fa fa-fw fa-file"></i> Login Page</a>
+                        <a href="{{ action('PagesController@index') }}"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="{{ action('PagesController@requests') }}"><i class="fa fa-fw fa-bar-chart-o"></i> Requests</a>
+                    </li>
+                    <li>
+                        <a href="{{ action('PagesController@inventory') }}"><i class="fa fa-fw fa-table"></i> Inventory</a>
+                    </li>
+                    <li>
+                        <a href="{{ action('PagesController@forms') }}"><i class="fa fa-fw fa-edit"></i> Request Forms</a>
+                    </li>
+                    <li>
+                        <a href="{{ action('PagesController@login') }}"><i class="fa fa-fw fa-file"></i> Login Page</a>
                     </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </nav>
-
+        <div class="container">
+            @yield( 'content' )
+        </div>
 
     </div>
     <!-- /#wrapper -->
@@ -185,14 +187,6 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
 </body>
-    
-  <body>
-       <div class="container">
-
-   @section( 'content' );
-      </div>
-  </body>
 
 </html>

@@ -13,4 +13,4 @@
             <h2>-Alright, break!</h2>
             <div class="title">Laravel 5</div>
         </div>
-    </div>
+</div>

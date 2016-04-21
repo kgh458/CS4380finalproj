@@ -12,7 +12,10 @@ class CreateTableLMS extends Migration
      */
     public function up()
     {
-        //
+        Schema::dropIfExists('LMS');
+        Schema::create('LMS', function (Blueprint $table) {
+            $table->increments('FILLER');
+        });
     }
 
     /**
@@ -22,6 +25,6 @@ class CreateTableLMS extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('LMS');
     }
 }

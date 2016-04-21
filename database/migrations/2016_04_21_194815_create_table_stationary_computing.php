@@ -12,7 +12,10 @@ class CreateTableStationaryComputing extends Migration
      */
     public function up()
     {
-        //
+        Schema::dropIfExists('stationary_computing');
+        Schema::create('stationary_computing', function (Blueprint $table) {
+            $table->increments('FILLER');
+        });
     }
 
     /**
@@ -22,6 +25,6 @@ class CreateTableStationaryComputing extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('stationary_computing');
     }
 }

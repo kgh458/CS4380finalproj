@@ -12,7 +12,10 @@ class CreateTableSupport extends Migration
      */
     public function up()
     {
-        //
+        Schema::dropIfExists('support');
+        Schema::create('support', function (Blueprint $table) {
+            $table->increments('FILLER');
+        });
     }
 
     /**
@@ -22,6 +25,6 @@ class CreateTableSupport extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('support');
     }
 }

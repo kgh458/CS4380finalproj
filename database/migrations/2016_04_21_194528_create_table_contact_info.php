@@ -14,7 +14,7 @@ class CreateTableContactInfo extends Migration
     {
         Schema::dropIfExists('contactInfo');
         Schema::create('contactInfo', function (Blueprint $table) {
-            //
+            $table->increments('FILLER');
         });
     }
 

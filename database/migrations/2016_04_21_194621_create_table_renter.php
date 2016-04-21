@@ -14,7 +14,7 @@ class CreateTableRenter extends Migration
     {
         Schema::dropIfExists('renter');
         Schema::create('renter', function (Blueprint $table) {
-            //
+            $table->increments('FILLER');
         });
     }
 

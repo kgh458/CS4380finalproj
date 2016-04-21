@@ -14,7 +14,7 @@ class CreateTableVoiceRecorder extends Migration
     {
         Schema::dropIfExists('voice_recorder');
         Schema::create('voice_recorder', function (Blueprint $table) {
-            //
+            $table->increments('FILLER');
         });
     }
 

@@ -14,7 +14,7 @@ class CreateTableCamera extends Migration
     {
         Schema::dropIfExists('camera');
         Schema::create('camera', function (Blueprint $table) {
-            //
+            $table->increments('FILLER');
         });
     }
 

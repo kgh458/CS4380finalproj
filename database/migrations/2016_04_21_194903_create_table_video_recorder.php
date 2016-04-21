@@ -14,7 +14,7 @@ class CreateTableVideoRecorder extends Migration
     {
         Schema::dropIfExists('video_recorder');
         Schema::create('video_recorder', function (Blueprint $table) {
-            //
+            $table->increments('FILLER');
         });
     }
 

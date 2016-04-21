@@ -14,7 +14,7 @@ class CreateTableClassroomSetup extends Migration
     {
         Schema::dropIfExists('classroom_setup');
         Schema::create('classroom_setup', function (Blueprint $table) {
-            //
+            $table->increments('FILLER');
         });
     }
 

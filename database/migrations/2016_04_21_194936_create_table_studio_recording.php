@@ -14,7 +14,7 @@ class CreateTableStudioRecording extends Migration
     {
         Schema::dropIfExists('studio_recording');
         Schema::create('studio_recording', function (Blueprint $table) {
-            //
+            $table->increments('FILLER');
         });
     }
 

@@ -12,7 +12,10 @@ class CreateTableMicrophone extends Migration
      */
     public function up()
     {
-        //
+        Schema::dropIfExists('microphone');
+        Schema::create('microphone', function (Blueprint $table) {
+            $table->increments('FILLER');
+        });
     }
 
     /**
@@ -22,6 +25,6 @@ class CreateTableMicrophone extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('microphone');
     }
 }

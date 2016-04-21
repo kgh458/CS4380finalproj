@@ -14,7 +14,7 @@ class CreateTableStaff extends Migration
     {
         Schema::dropIfExists('staff');
         Schema::create('staff', function (Blueprint $table) {
-            //
+            $table->increments('FILLER');
         });
     }
 

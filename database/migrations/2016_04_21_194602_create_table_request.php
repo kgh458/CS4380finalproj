@@ -14,7 +14,7 @@ class CreateTableRequest extends Migration
     {
         Schema::dropIfExists('request');
         Schema::create('request', function (Blueprint $table) {
-            //
+            $table->increments('FILLER');
         });
     }
 

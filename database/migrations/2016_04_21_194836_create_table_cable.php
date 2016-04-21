@@ -14,7 +14,7 @@ class CreateTableCable extends Migration
     {
         Schema::dropIfExists('cable');
         Schema::create('cable', function (Blueprint $table) {
-            //
+            $table->increments('FILLER');
         });
     }
 

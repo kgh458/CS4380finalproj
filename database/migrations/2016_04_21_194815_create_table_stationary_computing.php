@@ -14,7 +14,7 @@ class CreateTableStationaryComputing extends Migration
     {
         Schema::dropIfExists('stationary_computing');
         Schema::create('stationary_computing', function (Blueprint $table) {
-            //
+            $table->increments('FILLER');
         });
     }
 

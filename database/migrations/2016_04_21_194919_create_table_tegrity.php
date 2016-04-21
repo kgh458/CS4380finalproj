@@ -14,7 +14,7 @@ class CreateTableTegrity extends Migration
     {
         Schema::dropIfExists('tegrity');
         Schema::create('tegrity', function (Blueprint $table) {
-            //
+            $table->increments('FILLER');
         });
     }
 

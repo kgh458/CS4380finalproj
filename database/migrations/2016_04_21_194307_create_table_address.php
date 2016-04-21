@@ -19,7 +19,6 @@ class CreateTableAddress extends Migration
             $table->string('zip_code', 6);
             $table->string('state', 2);
             $table->string('city', 15);
-            $table->primary('addressId');
         });
     }
 

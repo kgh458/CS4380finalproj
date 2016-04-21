@@ -12,7 +12,12 @@ class CreateTableSupplier extends Migration
      */
     public function up()
     {
-        //
+        Schema::dropIfExists('supplier');
+        Schema::create('supplier', function (Blueprint $table) {
+            $table->increments('supplierId');
+            $table->string('email', 30);
+            $table->string('name', 30)
+        });        
     }
 
     /**
@@ -22,6 +27,6 @@ class CreateTableSupplier extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('supplier');
     }
 }

@@ -12,7 +12,13 @@ class CreateTableStock extends Migration
      */
     public function up()
     {
-        //
+        Schema::dropIfExists('stock');
+        Schema::create('stock', function (Blueprint $table) {
+            $table->integer('itemId')->unsigned()->references('itemId')->on('rental_item');
+            $table->integer('quantity_avail');
+            $table->integer('quntity_rented');
+            $table->primary('itemId');
+        });
     }
 
     /**
@@ -22,6 +28,6 @@ class CreateTableStock extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('stock');
     }
 }

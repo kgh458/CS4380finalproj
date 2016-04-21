@@ -18,3 +18,12 @@
 Route::get( '/', 'PagesController@index' );
 Route::get( 'index', 'PagesController@index' );
 Route::get( 'home', 'PagesController@index' );
+
+
+Route::get( 'requests', 'PagesController@requests' );
+Route::get( 'inventory', 'PagesController@inventory' );
+Route::get( 'forms', 'PagesController@forms' );
+Route::get( 'login', 'PagesController@login' );
+
+//this route will catch all wrong requests and display
+//an error page and/or reroute to the home page

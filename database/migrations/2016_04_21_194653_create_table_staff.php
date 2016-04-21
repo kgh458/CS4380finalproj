@@ -12,7 +12,10 @@ class CreateTableStaff extends Migration
      */
     public function up()
     {
-        //
+        Schema::dropIfExists('staff');
+        Schema::create('staff', function (Blueprint $table) {
+            //
+        });
     }
 
     /**
@@ -22,6 +25,6 @@ class CreateTableStaff extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('staff');
     }
 }

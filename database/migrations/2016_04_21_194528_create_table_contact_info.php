@@ -12,7 +12,10 @@ class CreateTableContactInfo extends Migration
      */
     public function up()
     {
-        //
+        Schema::dropIfExists('contactInfo');
+        Schema::create('contactInfo', function (Blueprint $table) {
+            //
+        });
     }
 
     /**
@@ -22,6 +25,6 @@ class CreateTableContactInfo extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('contactInfo');
     }
 }

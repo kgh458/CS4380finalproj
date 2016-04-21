@@ -12,7 +12,10 @@ class CreateTableStudioRecording extends Migration
      */
     public function up()
     {
-        //
+        Schema::dropIfExists('studio_recording');
+        Schema::create('studio_recording', function (Blueprint $table) {
+            //
+        });
     }
 
     /**
@@ -22,6 +25,6 @@ class CreateTableStudioRecording extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('studio_recording');
     }
 }

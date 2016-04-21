@@ -12,7 +12,10 @@ class CreateTableCable extends Migration
      */
     public function up()
     {
-        //
+        Schema::dropIfExists('cable');
+        Schema::create('cable', function (Blueprint $table) {
+            //
+        });
     }
 
     /**
@@ -22,6 +25,6 @@ class CreateTableCable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('cable');
     }
 }

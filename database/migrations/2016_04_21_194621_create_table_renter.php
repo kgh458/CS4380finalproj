@@ -12,7 +12,10 @@ class CreateTableRenter extends Migration
      */
     public function up()
     {
-        //
+        Schema::dropIfExists('renter');
+        Schema::create('renter', function (Blueprint $table) {
+            //
+        });
     }
 
     /**
@@ -22,6 +25,6 @@ class CreateTableRenter extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('renter');
     }
 }

@@ -175,12 +175,12 @@
             </div>
             <!-- /.navbar-collapse -->
         </nav>
-        <div class="container">
-            @yield( 'content' )
-        </div>
-
     </div>
     <!-- /#wrapper -->
+
+    <div class="container">
+        @yield( 'content' )
+    </div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

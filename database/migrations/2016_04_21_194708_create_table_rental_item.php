@@ -12,7 +12,10 @@ class CreateTableRentalItem extends Migration
      */
     public function up()
     {
-        //
+        Schema::dropIfExists('rental_item');
+        Schema::create('rental_item', function (Blueprint $table) {
+            $table->increments('FILLER');
+        });
     }
 
     /**
@@ -22,6 +25,6 @@ class CreateTableRentalItem extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('rental_item');
     }
 }

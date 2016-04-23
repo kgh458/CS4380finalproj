@@ -12,7 +12,10 @@ class CreateTablePortableComputing extends Migration
      */
     public function up()
     {
-        //
+        Schema::dropIfExists('portable_computing');
+        Schema::create('portable_computing', function (Blueprint $table) {
+            $table->increments('FILLER');
+        });
     }
 
     /**
@@ -22,6 +25,6 @@ class CreateTablePortableComputing extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('portable_computing');
     }
 }

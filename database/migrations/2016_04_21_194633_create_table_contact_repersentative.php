@@ -12,7 +12,10 @@ class CreateTableContactRepersentative extends Migration
      */
     public function up()
     {
-        //
+        Schema::dropIfExists('contact_rep');
+        Schema::create('contact_rep', function (Blueprint $table) {
+            $table->increments('FILLER');
+        });
     }
 
     /**
@@ -22,6 +25,6 @@ class CreateTableContactRepersentative extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('contact_rep');
     }
 }

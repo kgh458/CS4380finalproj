@@ -12,7 +12,10 @@ class CreateTableRequest extends Migration
      */
     public function up()
     {
-        //
+        Schema::dropIfExists('request');
+        Schema::create('request', function (Blueprint $table) {
+            $table->increments('FILLER');
+        });
     }
 
     /**
@@ -22,6 +25,6 @@ class CreateTableRequest extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('request');
     }
 }

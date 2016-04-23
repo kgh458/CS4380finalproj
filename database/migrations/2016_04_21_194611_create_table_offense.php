@@ -12,7 +12,10 @@ class CreateTableOffense extends Migration
      */
     public function up()
     {
-        //
+        Schema::dropIfExists('offense');
+        Schema::create('offense', function (Blueprint $table) {
+            $table->increments('FILLER');
+        });
     }
 
     /**
@@ -22,6 +25,6 @@ class CreateTableOffense extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('offense');
     }
 }

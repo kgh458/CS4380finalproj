@@ -12,7 +12,10 @@ class CreateTableClassroomSetup extends Migration
      */
     public function up()
     {
-        //
+        Schema::dropIfExists('classroom_setup');
+        Schema::create('classroom_setup', function (Blueprint $table) {
+            $table->increments('FILLER');
+        });
     }
 
     /**
@@ -22,6 +25,6 @@ class CreateTableClassroomSetup extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('classroom_setup');
     }
 }

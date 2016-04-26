@@ -11,7 +11,7 @@
 |
 */
 
-Route::get( '/', 'PagesController@login' );
+Route::get( '/', 'HomeController@index' );
 Route::get( 'index', 'PagesController@index' );
 Route::get( 'requests', 'PagesController@requests' );
 Route::get( 'inventory', 'PagesController@inventory' );
@@ -21,3 +21,6 @@ Route::post( 'user', 'AuthenticateController@authenticate' );
 
 //this route will catch all wrong requests and display
 //an error page and/or reroute to the home page
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

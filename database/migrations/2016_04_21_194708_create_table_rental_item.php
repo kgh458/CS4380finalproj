@@ -14,7 +14,8 @@ class CreateTableRentalItem extends Migration
     {
         Schema::dropIfExists('rental_item');
         Schema::create('rental_item', function (Blueprint $table) {
-            $table->increments('FILLER');
+            $table->integer('item_id', 6);
+            $table->primary("item_id");
         });
     }
 

@@ -16,7 +16,7 @@ class CreateTableDepartment extends Migration
         Schema::create('department', function (Blueprint $table) {
             $table->integer('departmentId')->unique();
             $table->string('departmentName', 15);
-            $table->integer('addressId')->unsigned()->references('addressId')->on('address');
+            $table->integer('addressId')->unsigned()->references('addressId')->on('address')-> ON DELETE CACASCADE;
             $table->primary("departmentId");
         });
     }

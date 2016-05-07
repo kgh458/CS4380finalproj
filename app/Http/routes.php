@@ -11,10 +11,13 @@
 |
 */
 
-//routes that will all go to the home page, this page
-//should have correct middleware to route the user to 
-//the application should they already be logged in, and
-//to the login page if they are not
-Route::get( '/', 'PagesController@index' );
+Route::get( '/', 'PagesController@login' );
 Route::get( 'index', 'PagesController@index' );
-Route::get( 'home', 'PagesController@index' );
+Route::get( 'requests', 'PagesController@requests' );
+Route::get( 'inventory', 'PagesController@inventory' );
+Route::get( 'forms', 'PagesController@forms' );
+Route::get( 'login', 'PagesController@login' );
+Route::post( 'user', 'AuthenticateController@authenticate' );
+
+//this route will catch all wrong requests and display
+//an error page and/or reroute to the home page
